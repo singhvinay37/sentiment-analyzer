@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css"  href="static/styles.css">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML APP - Sentiment Analyzer
+		</div>
+		<h2>Analyze Product Reviews from E-Commerce Website</h2>
+		
+	</div>
+	</header>
+	<p style="color:white;font-size:20;text-align: center;"><b>Sentiment for Review Comments</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Good Product - Positive Sentiment</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:red;">Bad Product - Negative Sentiment</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
