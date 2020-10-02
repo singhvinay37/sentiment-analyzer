@@ -11,6 +11,22 @@ from textblob import TextBlob, Word
 import joblib
 import pickle
 
+from flask import Flask, jsonify,  request, render_template
+import joblib
+import numpy as np
+import gensim
+import nltk
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+from keras.models import load_model
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+stop_words = set(stopwords.words('english'))
+stop_words.remove("not")
+import random
+from textblob import TextBlob, Word
+
+
 # load the model from disk
 filename = 'nlp_model.pkl'
 clf = joblib.load(open(filename, 'rb'))
