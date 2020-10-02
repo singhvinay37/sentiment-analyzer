@@ -31,6 +31,7 @@ def predict():
 		my_prediction = clf.predict(vect)
 	return render_template('result.html',prediction = my_prediction)
         
+	text = message
 	blob=TextBlob(text)
         nouns=list()
         for word,tag in blob.tags:
